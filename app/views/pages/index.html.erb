@@ -1,0 +1,12 @@
+<h1>ToDo List!</h1>
+<div ng-app="app">
+  <div ng-controller="todoCtrl">
+    <h3>Add a Task</h3>
+    <input ng-model="newTaskText">
+    <button ng-click="addTask(newTaskText)">Add Task</button>
+    <div ng-repeat = "task in tasks">
+      <p>{{ task }}</p>
+      <input type="text" ng-model="task">
+      <button ng-click="removeTask(task)">Completed/Remove</button>
+    </div>
+</div>
